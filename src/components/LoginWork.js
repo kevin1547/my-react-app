@@ -5,7 +5,7 @@ import './LoginForm.css';
 function App() {
     const adminUser = {
         email: "admin@admin.com",
-        password: "admin123"
+        password: "admin456"
     }
     const [user, setUser] = useState({name:"", email:""});
     const [error, setError] = useState("");

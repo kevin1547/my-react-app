@@ -1,43 +1,30 @@
 /*
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
-
-
-
-import Slider from './Work/Slider'
+import Slider from './Work/Slider/Slider'
 import LoginWork from './components/LoginWork'
+import data from './Work/Slider/dataSlider'
+import React from 'react';
+
 function App() {
   return (
     <>
-    <Slider />
+    <Slider src={data} />
     <LoginWork />
-    
     </>
   );
 }
 
-export default App;
+export default App;*/
+
+
+import MainApp from './Work/TodoList/MainApp'
+
+export default function App() {
+  return (
+    <div>
+     <MainApp/>
+    </div>
+  )
+}
+
+
+
