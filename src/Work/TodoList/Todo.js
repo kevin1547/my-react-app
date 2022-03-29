@@ -10,11 +10,9 @@ const Todo = ({text, setTodos, todo, todos}) =>{
                 return{
                     ...item, completed: !item.completed,
                 }
-                
             }
             return item;
         } ))
-        
     }
     return(
         <div className="todo">
