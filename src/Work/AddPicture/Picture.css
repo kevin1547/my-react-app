@@ -1,0 +1,34 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+}
+.container-in-picture {
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #000000;
+    color: #767676;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 120px;
+    background-color: #ffffff;
+}
+.picture {  
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.drop{
+    color:#000000;
+    font-weight: 700;
+    font-size: 25px;
+}
+span{
+    color: rgb(13, 114, 245)
+}

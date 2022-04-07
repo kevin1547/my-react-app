@@ -13,20 +13,25 @@ function App() {
   );
 }
 
-export default App;*/
+export default App; */
 
+// import Calculator from "./Work/Calculator/Calculator";
+// import MainApp from "./Work/TodoList/MainApp"
+// import Picture from "./Work/AddPicture/Picture";
+// import { Routes, Route } from "react-router-dom";
+// import Slider from "./Work/Slider/Slider";
 
-//import MainApp from './Work/TodoList/MainApp'
-import Calculator from './Work/Calculator/Calculator'
-import './Work/Calculator/style.css';
-//<MainApp/>
+import Switch from "./Work/Switch/Switch";
+// import Calculator from "./Work/Calculator/Calculator";
+// import CounterByMyself from "./Work/CounterByMyself/MainFunc";
+
+// import Counter from "./Counter";
+// import './style.css';
+// <MainApp/><Route path="/Calc" element={<Calculator />} />
 export default function App() {
   return (
     <div>
-      <Calculator/>
+      <Switch />
     </div>
-  )
+  );
 }
-
-
-

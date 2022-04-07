@@ -205,7 +205,7 @@ main {
 .text-black{
   color: black;
 }
-button{
+.button-in-counter{
     background: transparent;
         text-transform: uppercase;
         font-family: Arial;

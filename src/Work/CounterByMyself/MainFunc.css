@@ -1,0 +1,37 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.button-in-mainfunc{
+    font-size: larger;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent;
+    background-color: #eaeaea;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.notNumber{
+    background-color: orange;
+}
+.input-space{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 280px;
+    font-size: 35px;
+    background-color: #000000;
+    border-radius: 15px;
+    color: #ffffff;
+}
+.sec-in-counterbymyself{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+}
