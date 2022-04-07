@@ -38,7 +38,7 @@ export default function Switch() {
               {btn} the screen shot
             </button>
           </div>
-          <a href="http://localhost:3000/picture">
+          <a href="http://localhost:3001/picture">
             <img
               className={`picture-in-switch ${
                 clickAlready % 2 === 0 ? "alreadyClick" : ""
@@ -46,7 +46,7 @@ export default function Switch() {
               src={Pic}
             />
           </a>
-          <a href="http://localhost:3000/counter">
+          <a href="http://localhost:3001/counter">
             <img
               className={`picture-in-switch ${
                 clickAlready % 2 === 0 ? "alreadyClick" : ""
@@ -54,7 +54,7 @@ export default function Switch() {
               src={CounterPic}
             />
           </a>
-          <a href="http://localhost:3000/counterbymyself">
+          <a href="http://localhost:3001/counterbymyself">
             <img
               className={`picture-in-switch ${
                 clickAlready % 2 === 0 ? "alreadyClick" : ""
