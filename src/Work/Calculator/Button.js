@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { propTypes } from "prop-types";
+import propTypes from "prop-types";
 
 const isOperator = (val) => {
   return !isNaN(val) || val === "." || val === "=";

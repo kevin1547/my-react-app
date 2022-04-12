@@ -3,7 +3,7 @@ import "./Slider.css";
 import BtnSlider from "./btnSlider";
 import Photo from "./Photo";
 import MoveDot from "./MoveDot";
-import { propTypes } from "prop-types";
+import propTypes from "prop-types";
 
 export default function Slider({ src }) {
   const dataSlider = src;

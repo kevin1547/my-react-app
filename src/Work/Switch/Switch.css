@@ -1,8 +1,10 @@
 main{
+    display: flex;
+    flex-direction: row;
     background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg");
 }
 .main-container-in-switch{
-    display: flex;
+    display: block;
 }
 .picture-in-switch{
     height: 13rem;
@@ -15,4 +17,8 @@ main{
     width: 0rem;
     cursor: pointer;
     border: 0px solid #000;
+}
+.home{
+    color:rgba(0, 183, 255, 0.983);
+    border: 2px solid rgba(0, 183, 255, 0.983);
 }
