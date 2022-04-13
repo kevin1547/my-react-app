@@ -32,3 +32,7 @@ main{
 span{
     color: rgb(13, 114, 245)
 }
+.img-in-picture{
+    height: 100px;
+    width: 120px;
+}

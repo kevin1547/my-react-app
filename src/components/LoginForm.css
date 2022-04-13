@@ -12,13 +12,6 @@ input, button{
     outline: none;
 }
 
-.App-login{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 form{
     display: block;
     position: relative;
