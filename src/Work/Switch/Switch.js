@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Pic from "./pagination/pic.PNG";
 import CounterPic from "./pagination/counter-pic.PNG";
@@ -14,9 +14,6 @@ import LoginWork from "../../components/LoginWork";
 export default function Switch() {
   const [clickAlready, setClickAlready] = useState(0);
   const [btn, setBtn] = useState("show");
-  useEffect(() => {
-    console.log(clickAlready);
-  }, []);
 
   function test() {
     setClickAlready(clickAlready + 1);
