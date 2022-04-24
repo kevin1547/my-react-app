@@ -12,13 +12,11 @@ main{
     cursor: pointer;
     border: 2px solid #000;
 }
-.alreadyClick{
-    height: 0rem;
-    width: 0rem;
-    cursor: pointer;
-    border: 0px solid #000;
-}
 .home{
     color:rgba(0, 183, 255, 0.983);
     border: 2px solid rgba(0, 183, 255, 0.983);
+}
+.picture-in-switch-alreadyClick{
+    height: 0rem;
+    width: 0rem;
 }

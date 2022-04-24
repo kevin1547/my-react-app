@@ -4,8 +4,10 @@ export default function Img({ test, clickAlready, value }) {
   return (
     <img
       onClick={test}
-      className={`picture-in-switch ${
-        clickAlready % 2 === 0 ? "alreadyClick" : ""
+      className={`${
+        clickAlready % 2 === 0
+          ? "picture-in-switch-alreadyClick"
+          : "picture-in-switch"
       }`}
       src={value}
     />

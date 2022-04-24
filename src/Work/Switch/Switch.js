@@ -3,12 +3,14 @@ import { Routes, Route, Link } from "react-router-dom";
 import Pic from "./pagination/pic.PNG";
 import CounterPic from "./pagination/counter-pic.PNG";
 import Counterbymyself from "./pagination/counterbymyself.PNG";
+import SignUpImage from "./pagination/signup.PNG";
 import Picture from "../AddPicture/Picture";
 import Counter from "../../Counter";
 import MainFunc from "../CounterByMyself/MainFunc";
 import Item from "./Item";
 import "./Switch.css";
 import LoginWork from "../../components/LoginWork";
+import SignUpWork from "../SignUp/SignUpWork";
 // import { propTypes } from "prop-types";
 
 export default function Switch() {
@@ -31,16 +33,18 @@ export default function Switch() {
             <button className="button-in-counter" onClick={test}>
               {btn} the screen shot
             </button>
-            <Link to="http://localhost:3001">
+            <Link to="/">
               <button className="button-in-counter home">home</button>
             </Link>
           </div>
           <Link to="/picture">
             <Item test={test} clickAlready={clickAlready} value={Pic} />
           </Link>
+
           <Link to="/counter">
             <Item test={test} clickAlready={clickAlready} value={CounterPic} />
           </Link>
+
           <Link to="/counterbymyself">
             <Item
               test={test}
@@ -48,12 +52,16 @@ export default function Switch() {
               value={Counterbymyself}
             />
           </Link>
+          <Link to="/signup">
+            <Item test={test} clickAlready={clickAlready} value={SignUpImage} />
+          </Link>
         </div>
         <Routes>
           <Route path="/picture" element={<Picture />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/counterbymyself" element={<MainFunc />} />
           <Route path="/login" element={<LoginWork />} />
+          <Route path="/signup" element={<SignUpWork />} />
         </Routes>
       </div>
     </main>
