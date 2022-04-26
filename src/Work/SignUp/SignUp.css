@@ -76,48 +76,7 @@ form .form-inner .form-group input:focus{
 }
 
 form .form-inner input[type="submit"],
-.welcome button{
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background-image: linear-gradient(to left, rgb(32, 184, 255) 50%, rgb(32, 184, 255) 50%, rgb(226, 18, 226));
-    background-size: 200%;
-    background-position: 0;
-    transition: 0.4s;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-}
 
-form .form-inner input[type="submit"]:hover,
-.welcome button:hover{
-    background-position: 100% 0%;
-}
-
-.welcome{
-    width: 100%;
-    max-width: 480px;
-    background-color: #fff;
-    padding: 15px 30px;
-}
-
-.welcome h2{
-    color: #888;
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-
-.welcome h2 span{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    color: dodgerblue;
-    font-weight: 700;
-}
-.HELLO{
-    display: flex;
-    justify-content: space-between;
-}
 .button-in-SignUp{
     font-size: larger;
     border: 2px solid black;

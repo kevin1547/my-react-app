@@ -4,13 +4,13 @@ import Pic from "./pagination/pic.PNG";
 import CounterPic from "./pagination/counter-pic.PNG";
 import Counterbymyself from "./pagination/counterbymyself.PNG";
 import SignUpImage from "./pagination/signup.PNG";
-import Picture from "../AddPicture/Picture";
-import Counter from "../../Counter";
-import MainFunc from "../CounterByMyself/MainFunc";
+// import Picture from "../AddPicture/Picture";
+// import Counter from "../../Counter";
+// import MainFunc from "../CounterByMyself/MainFunc";
 import Item from "./Item";
 import "./Switch.css";
-import LoginWork from "../../components/LoginWork";
-import SignUpWork from "../SignUp/SignUpWork";
+// import LoginWork from "../../components/LoginWork";
+// import SignUpWork from "../SignUp/SignUpWork";
 // import { propTypes } from "prop-types";
 
 export default function Switch() {
@@ -24,7 +24,6 @@ export default function Switch() {
       setBtn("show");
     }
   }
-
   return (
     <main>
       <div className="main-container-in-switch">
@@ -56,13 +55,6 @@ export default function Switch() {
             <Item test={test} clickAlready={clickAlready} value={SignUpImage} />
           </Link>
         </div>
-        <Routes>
-          <Route path="/picture" element={<Picture />} />
-          <Route path="/counter" element={<Counter />} />
-          <Route path="/counterbymyself" element={<MainFunc />} />
-          <Route path="/login" element={<LoginWork />} />
-          <Route path="/signup" element={<SignUpWork />} />
-        </Routes>
       </div>
     </main>
   );

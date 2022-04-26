@@ -1,8 +1,10 @@
-main{
+.main-in-counterbymyself{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    margin-left: 22rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
 }
 .button-in-mainfunc{
     font-size: larger;

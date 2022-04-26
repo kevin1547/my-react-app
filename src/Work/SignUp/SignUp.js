@@ -1,20 +1,10 @@
 import React, { useState } from "react";
 import "./SignUp.css";
-
-export default function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({
-    phone: "",
-    email: "",
-    password: "",
-  });
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    Login(details);
-  };
-
+import axios from "axios";
+import { ButtonUp } from "./SignUp.style";
+export default function SignUp({ error, setDetails, details }) {
   return (
-    <form onSubmit={submitHandler}>
+    <form>
       <div className="form-inner">
         <h2>SignUp</h2>
         {error !== "" ? <div className="error">{error}</div> : ""}
@@ -50,9 +40,45 @@ export default function LoginForm({ Login, error }) {
             value={details.password}
           />
         </div>
-        <button className="button-in-SignUp" onClick={submitHandler}>
+        <ButtonUp
+          className="button-in-signIn"
+          onClick={async (e) => {
+            e.preventDefault();
+            const information = {
+              email: details.email,
+              password: details.password,
+            };
+            const SignInMainItem = await axios({
+              method: "POST",
+              url: "https://evening-cliffs-38545.herokuapp.com/api/user/login",
+              data: information,
+              headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+              },
+            });
+            console.log(SignInMainItem.data.msg);
+          }}
+        >
+          Sign In
+        </ButtonUp>
+        <ButtonUp
+          className="button-in-SignUp"
+          onClick={async (e) => {
+            console.log("Henry Test");
+            e.preventDefault();
+
+            const signUpMainItem = await axios({
+              method: "POST",
+              url: "https://evening-cliffs-38545.herokuapp.com/api/user",
+              headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+              },
+              data: details,
+            });
+          }}
+        >
           SignUp
-        </button>
+        </ButtonUp>
       </div>
     </form>
   );

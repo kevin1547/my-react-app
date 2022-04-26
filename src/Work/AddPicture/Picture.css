@@ -1,12 +1,15 @@
-main{
+.main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: linear-gradient(to bottom left, rgb(32, 184, 255),rgb(255, 194, 38) ,rgb(251, 88, 251));
 }
 .main-container{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .container-in-picture {
     align-items: center;
