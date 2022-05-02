@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SignUp from "./SignUp";
-import "./SignUp.css";
+// import "./SignUp.css";
 
 function SignUpWork() {
   const [details, setDetails] = useState({
