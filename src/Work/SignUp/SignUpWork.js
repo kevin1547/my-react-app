@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SignUp from "./SignUp";
+import { AppSignUp } from "./SignUp.style";
 // import "./SignUp.css";
 
 function SignUpWork() {
@@ -18,9 +19,9 @@ function SignUpWork() {
   };
 
   return (
-    <div className="App-login">
+    <AppSignUp>
       <SignUp error={error} setDetails={setDetails} details={details} />
-    </div>
+    </AppSignUp>
   );
 }
 

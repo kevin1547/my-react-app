@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 export const ButtonUp = styled.button`
   font-size: larger;
   border: 3px solid black;
@@ -24,8 +25,9 @@ export const FormInner = styled.div`
     rgb(226, 500, 220),
     rgb(32, 500, 255)
   );
-  display: flex;
-  flex-direction: column;
+  display: block;
+  position: relative;
+  width: 25rem;
   justify-content: center;
   align-items: center;
   border: 2px solid #000000;
@@ -36,6 +38,10 @@ export const FormInner = styled.div`
   min-height: 86vh;
   h2 {
     padding-bottom: 3rem;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -65,4 +71,10 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const AppSignUp = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

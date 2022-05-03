@@ -24,7 +24,7 @@ import { Routes, Route } from "react-router-dom";
 import Switch from "./Work/Switch/Switch";
 import SignUpWork from "./Work/SignUp/SignUpWork";
 // import Calculator from "./Work/Calculator/Calculator";
-import TodoList from "./Work/TodoList/MainApp";
+// import TodoList from "./Work/TodoList/MainApp";
 import MainFunc from "./Work/CounterByMyself/MainFunc";
 import Counter from "./Counter";
 import RootStoreContext from "./store";
@@ -38,7 +38,7 @@ export default function App() {
         <Route path="/counterbymyself" element={<MainFunc />} />
         <Route path="/signup" element={<SignUpWork />} />
       </Routes>
-      <TodoList />
+      <Switch />
     </RootStoreContext>
   );
 }
