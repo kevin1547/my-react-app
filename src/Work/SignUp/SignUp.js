@@ -7,12 +7,20 @@ import {
   InformationBox,
   ButtonContainer,
 } from "./SignUp.style";
-export default function SignUp({ error, setDetails, details }) {
+import { observer } from "mobx-react-lite";
+import { useStore } from "../../store";
+
+function SignUp() {
+  const {
+    SignUpStore: { email, phone, password, updateData },
+  } = useStore();
+  console.log("text email>>", email);
+
+  const information = { email, password, phone };
   return (
     <form>
       <FormInner>
         <h2>SignUp</h2>
-        {error && <div className="error">{error}</div>}
         <InformationBox>
           <div className="form-group">
             <label htmlFor="name">Phone Number:</label>
@@ -20,10 +28,10 @@ export default function SignUp({ error, setDetails, details }) {
               type="text"
               name="phone"
               id="name"
-              onChange={(e) =>
-                setDetails({ ...details, phone: e.target.value })
-              }
-              value={details.name}
+              onChange={(e) => {
+                updateData("phone", e.target.value);
+              }}
+              value={phone}
             />
           </div>
           <div className="form-group">
@@ -32,10 +40,10 @@ export default function SignUp({ error, setDetails, details }) {
               type="email"
               name="email"
               id="email"
-              onChange={(e) =>
-                setDetails({ ...details, email: e.target.value })
-              }
-              value={details.email}
+              onChange={(e) => {
+                updateData("email", e.target.value);
+              }}
+              value={email}
             />
           </div>
           <div className="form-group">
@@ -44,10 +52,10 @@ export default function SignUp({ error, setDetails, details }) {
               type="password"
               name="password"
               id="password"
-              onChange={(e) =>
-                setDetails({ ...details, password: e.target.value })
-              }
-              value={details.password}
+              onChange={(e) => {
+                updateData("password", e.target.value);
+              }}
+              value={password}
             />
           </div>
         </InformationBox>
@@ -56,10 +64,6 @@ export default function SignUp({ error, setDetails, details }) {
             className="button-in-signIn"
             onClick={async (e) => {
               e.preventDefault();
-              const information = {
-                email: details.email,
-                password: details.password,
-              };
               const SignInMainItem = await axios({
                 method: "POST",
                 url: "https://evening-cliffs-38545.herokuapp.com/api/user/login",
@@ -84,7 +88,7 @@ export default function SignUp({ error, setDetails, details }) {
                 headers: {
                   "Content-Type": "application/json; charset=UTF-8",
                 },
-                data: details,
+                data: information,
               });
             }}
           >
@@ -95,3 +99,4 @@ export default function SignUp({ error, setDetails, details }) {
     </form>
   );
 }
+export default observer(SignUp);

@@ -24,19 +24,21 @@ import { Routes, Route } from "react-router-dom";
 import Switch from "./Work/Switch/Switch";
 import SignUpWork from "./Work/SignUp/SignUpWork";
 // import Calculator from "./Work/Calculator/Calculator";
+import TodoList from "./Work/TodoList/MainApp";
 import MainFunc from "./Work/CounterByMyself/MainFunc";
 import Counter from "./Counter";
+import RootStoreContext from "./store";
 // import './style.css';
 export default function App() {
   return (
-    <div>
+    <RootStoreContext>
       <Routes>
         <Route path="/picture" element={<Picture />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/counterbymyself" element={<MainFunc />} />
         <Route path="/signup" element={<SignUpWork />} />
       </Routes>
-      <Switch />
-    </div>
+      <TodoList />
+    </RootStoreContext>
   );
 }

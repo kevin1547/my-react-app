@@ -5,9 +5,6 @@ const Todo = ({ text, setTodos, todo, todos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
-  Todo.propTypes = {
-    text: propTypes.string,
-  };
   const completeHandler = () => {
     setTodos(
       todos.map((item) => {
