@@ -1,10 +1,16 @@
 .main-in-counterbymyself{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 22rem;
+    align-items: center;
+    
     margin-top: 12rem;
     margin-bottom: 12rem;
+
+}
+.sec-in-counterbymyself{
+width: 22rem;
 }
 .button-in-mainfunc{
     font-size: larger;
@@ -31,7 +37,7 @@
     border-radius: 15px;
     color: #ffffff;
 }
-.sec-in-counterbymyself{
+.third-in-counterbymyself{
     display: flex;
     flex-direction: row;
     align-items: center;
