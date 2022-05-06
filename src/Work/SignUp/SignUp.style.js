@@ -6,14 +6,15 @@ export const ButtonUp = styled.button`
   border-radius: 9px;
   cursor: pointer;
   padding: 10px;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  transition: 0.75s;
   :hover {
     color: #fff;
     background-image: linear-gradient(
       to bottom right,
-      rgb(32, 200, 255),
+      rgb(10, 300, 900),
       rgb(226, 200, 226)
     );
   }
@@ -28,13 +29,12 @@ export const FormInner = styled.div`
   display: block;
   position: relative;
   width: 25rem;
+  height: 30rem;
   justify-content: center;
   align-items: center;
   border: 2px solid #000000;
   border-radius: 10px;
-  margin: 50px;
-  margin-right: 20rem;
-  margin-left: 20rem;
+  margin: 20px;
   min-height: 86vh;
   h2 {
     padding-bottom: 3rem;
@@ -77,4 +77,15 @@ export const AppSignUp = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const ButtonLight = styled.button`
+  margin-top: 1.2rem;
+  border: 3px solid #000;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 700;
+  font-family: sans-serif;
 `;
