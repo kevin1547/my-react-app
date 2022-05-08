@@ -27,6 +27,8 @@ export const DivTry = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 13rem;
+  height: 0px;
+  width: 0px;
 `;
 export const BtnInDivTry = styled.button`
   padding: 10px;
@@ -40,9 +42,4 @@ export const BtnInDivTry = styled.button`
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   background-color: transparent;
-`;
-
-export const Div = styled.div`
-  height: 0px;
-  width: 0px;
 `;
