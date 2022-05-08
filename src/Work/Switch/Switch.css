@@ -6,17 +6,7 @@ main{
 .main-container-in-switch{
     display: block;
 }
-.picture-in-switch{
-    height: 13rem;
-    width: 13rem;
-    cursor: pointer;
-    border: 2px solid #000;
-}
 .home{
     color:rgba(0, 183, 255, 0.983);
     border: 2px solid rgba(0, 183, 255, 0.983);
-}
-.picture-in-switch-alreadyClick{
-    height: 0rem;
-    width: 0rem;
 }

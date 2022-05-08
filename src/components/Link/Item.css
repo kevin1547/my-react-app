@@ -1,0 +1,10 @@
+.picture-in-switch{
+    height: 5rem;
+    width: 13rem;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+.picture-in-switch-alreadyClick{
+    height: 0rem;
+    width: 0rem;
+}

@@ -18,7 +18,31 @@ export const ButtonStyle = styled.button`
 
 export const DivStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #fff;
-  align-items: center;
+  justify-content: space-between;
+`;
+
+export const DivTry = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 13rem;
+`;
+export const BtnInDivTry = styled.button`
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 13rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+`;
+
+export const Div = styled.div`
+  height: 0px;
+  width: 0px;
 `;

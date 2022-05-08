@@ -37,8 +37,8 @@ export default function App() {
         <Route path="/counter" element={<Counter />} />
         <Route path="/counterbymyself" element={<MainFunc />} />
         <Route path="/signup" element={<SignUpWork />} />
+        <Route path="/" element={<Switch />} />
       </Routes>
-      <Switch />
     </RootStoreContext>
   );
 }
