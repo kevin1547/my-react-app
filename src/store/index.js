@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import SignUpWork from "../Work/SignUp/SignUpWork";
 import SignUpContext from "../Work/SignUp/store/SignUpStore";
 
 import { DivStyle, ButtonStyle } from "./Index.style";
@@ -11,7 +10,6 @@ const RootStore = ({ children }) => {
   const [Light, setLight] = useState(true);
   const changeLight = () => {
     setLight((prev) => !prev);
-    console.log(Light);
   };
   return (
     <LightContext.Provider value={Light}>
@@ -20,7 +18,6 @@ const RootStore = ({ children }) => {
       </DivStyle>
       <RootStoreContext.Provider value={{ SignUpStore }}>
         {children}
-        <SignUpWork />
       </RootStoreContext.Provider>
     </LightContext.Provider>
   );

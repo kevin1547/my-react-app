@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Pic from "./pagination/pic.PNG";
 import CounterPic from "./pagination/counter-pic.PNG";
 import Counterbymyself from "./pagination/counterbymyself.PNG";

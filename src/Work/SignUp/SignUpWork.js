@@ -20,12 +20,12 @@ function SignUpWork() {
 
   const LightTheme = useContext(LightContext);
   const Theme = {
-    transition: "0.5s",
+    transition: "1s",
     background: LightTheme ? "#ffffff" : "#000",
     color: LightTheme ? "#000000" : "#fff",
   };
   const FormTheme = {
-    transition: "0.5s",
+    transition: "1s",
     background: LightTheme ? "#007979" : "#C1FFE4",
     color: LightTheme ? "#fff" : "#000000",
   };
