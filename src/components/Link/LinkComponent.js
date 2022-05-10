@@ -5,7 +5,7 @@ import CounterPic from "../../Work/Switch/pagination/counter-pic.PNG";
 import Counterbymyself from "../../Work/Switch/pagination/counterbymyself.PNG";
 import SignUpImage from "../../Work/Switch/pagination/signup.PNG";
 import SwitchPic from "../../Work/Switch/pagination/switch-pic.PNG";
-import { SelectBtn, Img, Container } from "./LinkComponent.style";
+import { SelectBtn, Img } from "./LinkComponent.style";
 
 export default function LinkComponent() {
   const [clickAlready, setClickAlready] = useState(true);
