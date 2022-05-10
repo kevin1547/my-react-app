@@ -13,12 +13,19 @@ export const SelectBtn = styled.button`
   background-color: transparent;
 `;
 
-export const Img = ({ clickAlready, test, value }) => {
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Img = ({ clickAlready, MainFunc, value }) => {
   const ImgStyle = styled.img`
-    height: ${clickAlready % 2 === 0 ? "0rem" : "5rem"};
-    width: ${clickAlready % 2 === 0 ? "0rem" : "13rem"};
+    height: 5rem;
+    width: 13rem;
     cursor: pointer;
-    border: ${clickAlready % 2 === 0 ? "0rem" : "2px solid #000"};
+    border: 2px solid #000;
+    visibility: ${clickAlready ? "hidden" : "visible"};
   `;
-  return <ImgStyle onClick={test} src={value} />;
+  return <ImgStyle onClick={MainFunc} src={value} />;
 };

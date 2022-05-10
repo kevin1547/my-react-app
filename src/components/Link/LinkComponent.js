@@ -5,41 +5,50 @@ import CounterPic from "../../Work/Switch/pagination/counter-pic.PNG";
 import Counterbymyself from "../../Work/Switch/pagination/counterbymyself.PNG";
 import SignUpImage from "../../Work/Switch/pagination/signup.PNG";
 import SwitchPic from "../../Work/Switch/pagination/switch-pic.PNG";
-import { SelectBtn, Img } from "./LinkComponent.style";
+import { SelectBtn, Img, Container } from "./LinkComponent.style";
 
 export default function LinkComponent() {
-  const [clickAlready, setClickAlready] = useState(0);
+  const [clickAlready, setClickAlready] = useState(true);
   const [btn, setBtn] = useState("show");
 
-  function test() {
-    setClickAlready(clickAlready + 1);
-    setBtn("remove");
-    if (clickAlready % 2 !== 0) {
-      setBtn("show");
-    }
+  function MainFunc() {
+    setClickAlready((prev) => !prev);
+    setBtn(clickAlready ? "remove" : "show");
   }
   return (
     <div>
-      <SelectBtn onClick={test}>{btn} the screen shot</SelectBtn>
+      <SelectBtn onClick={MainFunc}>{btn} the screen shot</SelectBtn>
       <div>
         <Link to="/picture">
-          <Img test={test} clickAlready={clickAlready} value={Pic} />
+          <Img MainFunc={MainFunc} clickAlready={clickAlready} value={Pic} />
         </Link>
         <Link to="/counter">
-          <Img test={test} clickAlready={clickAlready} value={CounterPic} />
+          <Img
+            MainFunc={MainFunc}
+            clickAlready={clickAlready}
+            value={CounterPic}
+          />
         </Link>
         <Link to="/counterbymyself">
           <Img
-            test={test}
+            MainFunc={MainFunc}
             clickAlready={clickAlready}
             value={Counterbymyself}
           />
         </Link>
         <Link to="/signup">
-          <Img test={test} clickAlready={clickAlready} value={SignUpImage} />
+          <Img
+            MainFunc={MainFunc}
+            clickAlready={clickAlready}
+            value={SignUpImage}
+          />
         </Link>
         <Link to="/">
-          <Img test={test} clickAlready={clickAlready} value={SwitchPic} />
+          <Img
+            MainFunc={MainFunc}
+            clickAlready={clickAlready}
+            value={SwitchPic}
+          />
         </Link>
       </div>
     </div>

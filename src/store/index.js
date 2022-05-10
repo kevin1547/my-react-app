@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 import SignUpContext from "../Work/SignUp/store/SignUpStore";
-import { DivStyle, ButtonStyle, DivTry, BtnInDivTry } from "./Index.style";
+import { DivStyle, ButtonStyle, DivTry } from "./Index.style";
 /// /////////////////////
 import LinkComponent from "../components/Link/LinkComponent";
 
