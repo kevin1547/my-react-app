@@ -7,6 +7,8 @@ export default function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [user, setUser] = useState("Your");
+  const [index, setIndex] = useState(true);
 
   useEffect(() => {
     getLocalTodos();
@@ -44,18 +46,43 @@ export default function App() {
     }
   };
 
+  const changeUser = (e) => {
+    setUser(e.target.value);
+  };
+
   return (
     <div>
       <header>
-        <h1> Kevin&apos;s TodoList </h1>
+        <h1> {user}&apos;s TodoList </h1>
+        <button
+          className="user-in-todolist"
+          onClick={() => {
+            setIndex((prev) => !prev);
+          }}
+        >
+          change username
+        </button>
       </header>
-      <Form
-        setInputText={setInputText}
-        InputText={InputText}
-        todos={todos}
-        setTodos={setTodos}
-        setStatus={setStatus}
-      />
+      {index ? (
+        <div className="UserChange">
+          <input type="text" className="USER" onChange={changeUser} />
+          <button
+            onClick={() => {
+              setIndex((prev) => !prev);
+            }}
+          >
+            Change
+          </button>
+        </div>
+      ) : (
+        <Form
+          setInputText={setInputText}
+          InputText={InputText}
+          todos={todos}
+          setTodos={setTodos}
+          setStatus={setStatus}
+        />
+      )}
       <TodoList
         todos={todos}
         setTodos={setTodos}

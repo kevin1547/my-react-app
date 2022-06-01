@@ -19,13 +19,10 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Img = ({ clickAlready, MainFunc, value }) => {
-  const ImgStyle = styled.img`
-    height: 5rem;
-    width: 13rem;
-    cursor: pointer;
-    border: 2px solid #000;
-    visibility: ${clickAlready ? "hidden" : "visible"};
-  `;
-  return <ImgStyle onClick={MainFunc} src={value} />;
-};
+export const Dropdown = styled.div`
+  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
+  img {
+    border: 1px solid #000;
+    width: 10rem;
+  }
+`;

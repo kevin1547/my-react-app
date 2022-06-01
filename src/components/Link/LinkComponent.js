@@ -5,52 +5,41 @@ import CounterPic from "../../Work/Switch/pagination/counter-pic.PNG";
 import Counterbymyself from "../../Work/Switch/pagination/counterbymyself.PNG";
 import SignUpImage from "../../Work/Switch/pagination/signup.PNG";
 import SwitchPic from "../../Work/Switch/pagination/switch-pic.PNG";
-import { SelectBtn, Img } from "./LinkComponent.style";
+import TodoListPic from "../../Work/Switch/pagination/todolist-pic.png";
+import { SelectBtn, Dropdown } from "./LinkComponent.style";
 
 export default function LinkComponent() {
-  const [clickAlready, setClickAlready] = useState(true);
-  const [btn, setBtn] = useState("show");
+  const [visible, setVisible] = useState(false);
 
-  function MainFunc() {
-    setClickAlready((prev) => !prev);
-    setBtn(clickAlready ? "remove" : "show");
-  }
   return (
     <div>
-      <SelectBtn onClick={MainFunc}>{btn} the screen shot</SelectBtn>
-      <div>
+      <SelectBtn
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {visible ? "remove" : "show"} the screen shot
+      </SelectBtn>
+      <Dropdown visible={visible}>
         <Link to="/picture">
-          <Img MainFunc={MainFunc} clickAlready={clickAlready} value={Pic} />
+          <img src={Pic} height={100} />
         </Link>
         <Link to="/counter">
-          <Img
-            MainFunc={MainFunc}
-            clickAlready={clickAlready}
-            value={CounterPic}
-          />
+          <img src={CounterPic} height={100} />
         </Link>
         <Link to="/counterbymyself">
-          <Img
-            MainFunc={MainFunc}
-            clickAlready={clickAlready}
-            value={Counterbymyself}
-          />
+          <img src={Counterbymyself} height={100} />
         </Link>
         <Link to="/signup">
-          <Img
-            MainFunc={MainFunc}
-            clickAlready={clickAlready}
-            value={SignUpImage}
-          />
+          <img src={SignUpImage} height={100} />
+        </Link>
+        <Link to="/todolist">
+          <img src={TodoListPic} height={100} />
         </Link>
         <Link to="/">
-          <Img
-            MainFunc={MainFunc}
-            clickAlready={clickAlready}
-            value={SwitchPic}
-          />
+          <img src={SwitchPic} height={100} />
         </Link>
-      </div>
+      </Dropdown>
     </div>
   );
 }

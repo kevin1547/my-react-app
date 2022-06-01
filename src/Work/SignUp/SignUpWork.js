@@ -13,10 +13,18 @@ import { useContext } from "react";
 
 function SignUpWork() {
   const {
-    SignUpStore: { email, phone, password, updateData },
+    SignUpStore: {
+      email,
+      phone,
+      password,
+      updateData,
+      plusOne,
+      decreaseOne,
+      number,
+      signUpSubmitFunc,
+      signInSubmitFunc,
+    },
   } = useStore();
-
-  const information = { email, password, phone };
 
   const LightTheme = useContext(LightContext);
   const Theme = {
@@ -74,6 +82,7 @@ function SignUpWork() {
         </InformationBox>
         <ButtonContainer>
           <ButtonUp
+            /*
             className="button-in-signIn"
             onClick={async (e) => {
               e.preventDefault();
@@ -85,16 +94,16 @@ function SignUpWork() {
                   "Content-Type": "application/json; charset=UTF-8",
                 },
               });
-              console.log(SignInMainItem.data.msg);
-            }}
+            }} */
+            onClick={signInSubmitFunc}
           >
             Sign In
           </ButtonUp>
           <ButtonUp
+            /*
             className="button-in-SignUp"
             onClick={async (e) => {
               e.preventDefault();
-
               const signUpMainItem = await axios({
                 method: "POST",
                 url: "https://evening-cliffs-38545.herokuapp.com/api/user",
@@ -103,12 +112,16 @@ function SignUpWork() {
                 },
                 data: information,
               });
-            }}
+            }} */
+            onClick={signUpSubmitFunc}
           >
             SignUp
           </ButtonUp>
         </ButtonContainer>
       </FormInner>
+      <div>{number}</div>
+      <button onClick={plusOne}>plusOne</button>
+      <button onClick={decreaseOne}>decreaseOne</button>
     </AppSignUp>
   );
 }

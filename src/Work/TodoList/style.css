@@ -1,11 +1,12 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   body {
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    color: white;
+    background-image: linear-gradient(120deg, #eae7e7 0%, #e8e8e8 100%);
+    color: rgb(13, 0, 66);
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
   }
@@ -130,6 +131,45 @@
     background: #ff6f47;
     cursor: pointer;
     pointer-events: none;
+  }
+
+  .user-in-todolist{
+    background-color: transparent;
+    border: 2px solid #fda085;
+    color: #fda085;
+    padding: 5px;
+    margin-left: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+
+  .user-in-todolist:hover{
+    background-color: #ff6f47;
+    color: antiquewhite;
+  }
+
+  .UserChange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .UserChange input{
+    padding: 10px;
+    font-size: larger;
+  }
+  .UserChange button{
+    padding: 10px;
+    font-size: larger;
+    background-color: rgb(0, 21, 53);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .UserChange button:hover{
+    background-color: #479dff;
   }
   /* Transition */
   /*
